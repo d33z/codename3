@@ -2,7 +2,9 @@
 var debug = require('debug')('codename3-22972601');
 var app = require('../app');
 
-app.set('port', process.env.PORT || 3000);
+var port = process.env.PORT || 3000;
+console.log("Using port: ", port);
+app.set('port', port);
 
 var server = app.listen(app.get('port'), function() {
   debug('Express server listening on port ' + server.address().port);
